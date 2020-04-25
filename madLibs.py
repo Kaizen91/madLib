@@ -31,3 +31,5 @@ for i in range(len(replacements)):
     madLibContent = replaceRegex.sub(replacements[i], madLibContent)
 #Print the results to the screen and save them to a new text file
 print(madLibContent)
+madLibsEdited = open(os.path.join(os.getcwd(),'madLibsEdited.txt'),'w')
+madLibsEdited.write(madLibContent)
