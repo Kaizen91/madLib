@@ -3,28 +3,31 @@
 #adjectives, verbs, and nouns.
 
 import os, re
-#To Do: Read in a text file and store its contents in a var
+#Read in a text file and store its contents in a var
 madLib = open(os.path.join(os.getcwd(),'madLibs.txt'))
-madLibContent = madLib.read().split()
+madLibContent = madLib.read()
 
-#To Do: Take in the user input and store it in variables
+# Take in the user input and store it
+replacements = []
 print('Enter an adjective:')
-adj = input()
+replacements.append(input())
 
 print('Enter a noun:')
-noun1 = input()
+replacements.append(input())
 
 print('Enter a verb:')
-verb = input()
+replacements.append(input())
 
 print('Enter a noun:')
-noun2 = input()
-
-#To Do: Search the text file var for the NOUN, ADJECTIVE, VERB flags and
-#replace them with the user' input
-
-    #create a regex obj for each input field in the text file
-    #swap the place holders for the input values
+replacements.append(input())
 
 
-#To Do: Print the results to the screen and save them to a new text file
+
+#create a regex obj for the input fields in the text file
+#swap the place holders for the input values
+for i in range(len(replacements)):
+    print(replacements[i])
+    replaceRegex = re.compile(r'REPLACE'+str(i+1))
+    madLibContent = replaceRegex.sub(replacements[i], madLibContent)
+#Print the results to the screen and save them to a new text file
+print(madLibContent)

@@ -1,2 +1,2 @@
-The ADJECTIVE panda walked to the NOUN and then VERB. A nearby NOUN2 was
+The REPLACE1 panda walked to the REPLACE2 and then REPLACE3. A nearby REPLACE4 was
 unaffected by these events.
